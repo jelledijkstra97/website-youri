@@ -1,0 +1,23 @@
+@import "variables";
+@import "mixins";
+@import "templates/index";
+@import "partials/index";
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: $beige;
+    font-family: 'Nunito';
+}
+
+// Main background
+.root {
+    background-color: $beige;
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: $black;
+}

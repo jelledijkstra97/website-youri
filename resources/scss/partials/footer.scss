@@ -1,0 +1,84 @@
+.footer {
+    width: 100vw;
+    padding: 25px 0px;
+
+    display: flex;
+    flex-direction: row;
+
+    @include for-phone-only {
+        flex-direction: column;
+    }
+
+    & .contact, .terms {
+        flex-grow: 2;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20vw;
+
+        @include for-phone-only {
+            width: 100vw;
+            padding-bottom: 10px;
+        }
+
+        & a {
+            color: $black;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    & .contact {
+        order: 1;
+
+        @include for-phone-only {
+            order: 3;
+            padding-top: 10px;
+        }
+    }
+
+    & .terms {
+        order: 3;
+
+        @include for-phone-only {
+            order: 4;
+        }
+    }
+
+    & .logo-links {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & .logo {
+            width: 80px;
+
+            & img {
+                max-width: 100%;
+            }
+        }
+
+        & .links {
+            display: flex;
+
+            & div, a {
+                padding: 5px 7px;
+    
+                & img {
+                    max-width: 30px;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}

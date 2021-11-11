@@ -1,0 +1,40 @@
+.split-block {
+    display: flex;
+    width: 100vw;
+
+    & .part1, .part2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & .container {
+            width: 100%;
+        }
+    }
+
+    &-50-50 {
+        & .part1, .part2 {
+            width: 50%;
+        }
+    }
+
+    &-60-40 {
+        & .part1 {
+            width: 60%;
+        }
+
+        & .part2 {
+            width: 40%;
+        }
+    }
+
+    &-40-60 {
+        & .part1 {
+            width: 40%;
+        }
+
+        & .part2 {
+            width: 60%;
+        }
+    }
+}

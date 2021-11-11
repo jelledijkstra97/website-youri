@@ -1,0 +1,16 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    & .uk-navbar-nav > li {
+        &.logo img {
+            height: 50px;
+        }
+
+        & > a {
+            color: $orange !important;
+        }
+    }
+}
