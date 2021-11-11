@@ -9,6 +9,36 @@
 
         & .container {
             width: 100%;
+
+            & .text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0px 30px;
+                height: 100%;
+        
+                & .title {
+                    text-align: center;
+                    color: $orange;
+                    text-transform: uppercase;
+                    font-size: 35px;
+                    margin-bottom: 20px;
+                }
+
+                & .subtitle {
+                    text-align: center;
+                    color: $green;
+                    text-transform: uppercase;
+                    font-size: 22px;
+                    margin-bottom: 25px;
+                }
+        
+                & .body {
+                    text-align: justify;
+                    max-width: 600px;
+                }
+            }
         }
     }
 

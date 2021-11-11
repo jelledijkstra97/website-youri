@@ -44,6 +44,11 @@
 
 @section($pageKey.'-part2')
     <div>
-
+        <div class="text">
+            <div class="title">Fotografie</div>
+            <div class="body">
+                Onze wereld gaat snel, wij bewegen met haar mee. Maar met één druk op de knop… staat hij soms heel even stil. Youri’s fotografie van outdoor, vastgoed, evenementen, portretten en social content doelt op een effectief resultaat waar “u” tegen gezegd kan worden. 
+            </div>
+        </div>
     </div>
 @endsection

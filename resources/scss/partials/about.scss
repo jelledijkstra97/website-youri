@@ -3,6 +3,8 @@
 
     & .image {
         max-width: 80%;
+        display: flex;
+        justify-content: center;
 
         & img {
             max-width: 80%;
