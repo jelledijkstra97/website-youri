@@ -25,6 +25,6 @@
 
 @section($pageKey.'-part2')
 <div class="image">
-    <img src="assets/images/about.jpg" alt="Over Youri">
+    <img src="assets/images/about.JPG" alt="Over Youri">
 </div>
 @endsection
