@@ -3,14 +3,45 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10000;
     
     & .uk-navbar-nav > li {
-        &.logo img {
-            height: 50px;
+        &.logo {
+            &.flipped {
+                display: none;
+            }
+
+            & img {
+                height: 50px;
+            }
         }
 
         & > a {
-            color: $orange !important;
+            color: $green;
+        }
+
+        @include for-phone-only {
+            &:not(.logo) > a {
+                display: none;
+            }
+        }
+    }
+
+    &.flipped {
+        & .uk-navbar-nav > li {
+            &.logo {
+                &.flipped {
+                    display: initial;
+                }
+
+                &:not(.flipped) {
+                    display: none;
+                }
+            }
+    
+            & > a {
+                color: $orange;
+            }
         }
     }
 }

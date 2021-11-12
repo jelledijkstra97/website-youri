@@ -9,5 +9,10 @@
 
     &.full-height {
         min-height: 100vh;
+
+        @include for-phone-only {
+            min-height: 0px;
+            padding-top: 80px;
+        }
     }
 }

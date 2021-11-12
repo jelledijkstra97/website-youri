@@ -28,7 +28,7 @@
         <meta name="theme-color" content="#ffffff">
     </head>
     <body class="antialiased">
-        <div class="root">
+        <div id="root" class="root">
             @include('partials.header')
 
             @include('templates.full-screen-video', [
@@ -38,10 +38,12 @@
             ])
 
             @include('partials.services.index')
-            
-            @include('partials.audio')
+
+            @include('partials.film')
 
             @include('partials.photo')
+            
+            @include('partials.audio')
 
             @include('partials.about')
 

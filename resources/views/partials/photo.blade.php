@@ -21,12 +21,13 @@
 ?>
 
 @extends('templates.split-block', [
-    'layout' => '60-40',
+    'layout' => '40-60',
     'pageKey' => $pageKey,
-    'part1ContainerClass' => 'slider'
+    'part2ContainerClass' => 'slider',
+    'topPart' => 'part2'
 ])
 
-@section($pageKey.'-part1')
+@section($pageKey.'-part2')
     <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true;">
         <ul class="uk-slider-items">
             @foreach ($photos as $image)
@@ -42,10 +43,10 @@
     </div>
 @endsection
 
-@section($pageKey.'-part2')
+@section($pageKey.'-part1')
     <div>
         <div class="text">
-            <div class="title">Fotografie</div>
+            <div class="title text-bold">Fotografie</div>
             <div class="body">
                 Onze wereld gaat snel, wij bewegen met haar mee. Maar met één druk op de knop… staat hij soms heel even stil. Youri’s fotografie van outdoor, vastgoed, evenementen, portretten en social content doelt op een effectief resultaat waar “u” tegen gezegd kan worden. 
             </div>

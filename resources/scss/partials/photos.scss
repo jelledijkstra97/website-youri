@@ -5,7 +5,14 @@
         max-width: 80%;
 
         & img {
+            // height: 300px;
             max-height: 300px;
+            margin: 0px 2px;
+
+            @include for-phone-only {
+                // height: 200px;
+                max-height: 200px;
+            }
         }
     }
 }

@@ -3,7 +3,7 @@
         <img src="{{ $icon }}" alt="{{ $title }}">
     </div>
     <div class="text">
-        <div class="title">{{ $title }}</div>
+        <div class="title text-bold">{{ $title }}</div>
         <div class="body">
             {!! nl2br($body) !!}
         </div>
