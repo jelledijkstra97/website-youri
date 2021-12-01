@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<div id="sidebar" uk-offcanvas="flip: true">
+<div id="sidebar" uk-offcanvas="flip: true; overlay: true;">
     <div class="uk-offcanvas-bar container">
         <div class="logo">
             <img src="assets/logos/orange.png" alt="Logo">
