@@ -15,6 +15,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">

@@ -2,6 +2,10 @@
     display: flex;
     width: 100vw;
 
+    &.full-height {
+        min-height: 100vh;
+    }
+
     @include for-phone-only {
         flex-direction: column;
     }
@@ -75,6 +79,26 @@
 
         & .part2 {
             width: 60%;
+        }
+    }
+
+    &-70-30 {
+        & .part1 {
+            width: 70%;
+        }
+
+        & .part2 {
+            width: 30%
+        }
+    }
+
+    &-30-70 {
+        & .part1 {
+            width: 30%;
+        }
+
+        & .part2 {
+            width: 70%;
         }
     }
 

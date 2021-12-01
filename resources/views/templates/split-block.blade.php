@@ -1,5 +1,5 @@
 <?php
-    $allowedLayouts = ['50-50', '60-40', '40-60'];
+    $allowedLayouts = ['50-50', '60-40', '40-60', '70-30', '30-70'];
     if (!in_array($layout, $allowedLayouts)) {
         throw new Exception("Layout $layout not supported");
     }

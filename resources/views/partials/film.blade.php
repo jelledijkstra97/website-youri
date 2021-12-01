@@ -2,8 +2,15 @@
     $pageKey = 'film';
 
     $videos = [
-        'https://www.youtube.com/embed/c6BloygNyek',
-        'https://www.youtube.com/embed/IFvwBah1xs8'
+        ['title' => 'Tijdreizigers', 'thumb' => 'assets/thumbnails/THUMBNAIL-1.png', 'url' => 'https://www.youtube.com/embed/watch?v=pF6XcXfcKNc&list=PLZACDBMtuTVfd-arBBSfaEKcdckjAzgbf&index=1'],
+        ['title' => 'Iedereen is leerling', 'thumb' => 'assets/thumbnails/THUMBNAIL-2.png', 'url' => 'https://www.youtube.com/embed/watch?v=c6BloygNyek&list=PLZACDBMtuTVfd-arBBSfaEKcdckjAzgbf&index=2'],
+        ['title' => 'Kasteel Duivenvoorde', 'thumb' => 'assets/thumbnails/THUMBNAIL-3.png', 'url' => 'https://www.youtube.com/embed/watch?v=7srAMS0U_So&list=PLZACDBMtuTVfd-arBBSfaEKcdckjAzgbf&index=3'],
+        ['title' => 'Thanks a million, New York', 'thumb' => 'assets/thumbnails/THUMBNAIL-4.png', 'url' => 'https://www.youtube.com/embed/watch?v=IFvwBah1xs8&list=PLZACDBMtuTVfd-arBBSfaEKcdckjAzgbf&index=4'],
+        ['title' => 'T-Mobile Nederland', 'thumb' => 'assets/thumbnails/THUMBNAIL-5.png', 'url' => 'https://www.youtube.com/embed/watch?v=cFnoFJY30Fo&list=PLZACDBMtuTVfd-arBBSfaEKcdckjAzgbf&index=5'],
+        ['title' => 'Telekom Shift', 'thumb' => 'assets/thumbnails/THUMBNAIL-6.png', 'url' => 'https://www.youtube.com/embed/watch?v=iCRGhEMzTnA&list=PLZACDBMtuTVfd-arBBSfaEKcdckjAzgbf&index=6'],
+        ['title' => 'Kasteel Duivenvoorde', 'thumb' => 'assets/thumbnails/THUMBNAIL-7.png', 'url' => 'https://www.youtube.com/embed/watch?v=dpAa55FtIJ8&list=PLZACDBMtuTVfd-arBBSfaEKcdckjAzgbf&index=7'],
+        ['title' => 'T-Mobile Nederland', 'thumb' => 'assets/thumbnails/THUMBNAIL-8.png', 'url' => 'https://www.youtube.com/embed/watch?v=0-FTvtNK78g&list=PLZACDBMtuTVfd-arBBSfaEKcdckjAzgbf&index=8'],
+        ['title' => 'T-Mobile Nederland & FC Utrecht', 'thumb' => 'assets/thumbnails/THUMBNAIL-9.png', 'url' => 'https://www.youtube.com/embed/watch?v=uIWA8d0bqkk&list=PLZACDBMtuTVfd-arBBSfaEKcdckjAzgbf&index=9']
     ]
 ?>
 
@@ -17,11 +24,9 @@
 @section($pageKey.'-part1')
     <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true;">
         <ul class="uk-slider-items">
-            @foreach (range(1, 5) as $thumb)
-            <li>
-                <div class="thumb-placeholder film-thumbnail" title="Thumb {{ $thumb }}" url="{{ $videos[$thumb % 2] }}">
-                    Thumb {{ $thumb }}
-                </div>
+            @foreach ($videos as $video)
+            <li class="uk-width-3-4">
+                <img class="film-thumbnail" title="{{ $video['title'] }}" url="{{ $video['url'] }}" src="{{ $video['thumb'] }}">
             </li>
             @endforeach
         </ul>
@@ -36,7 +41,7 @@
         <button id="film-modal-toggle" uk-toggle="target: #film-modal" type="button" style="display: none;"></button>
         <div id="film-modal" uk-modal>
             <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-                <!-- <h2 class="uk-modal-title"></h2> -->
+                <h2 class="uk-modal-title"></h2>
                 <button class="uk-modal-close-outside" type="button" uk-close></button>
 
                 <div class="iframe-container">

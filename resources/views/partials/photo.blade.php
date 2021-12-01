@@ -21,10 +21,11 @@
 ?>
 
 @extends('templates.split-block', [
-    'layout' => '40-60',
+    'layout' => '30-70',
     'pageKey' => $pageKey,
     'part2ContainerClass' => 'slider',
-    'topPart' => 'part2'
+    'topPart' => 'part2',
+    'fullHeight' => true
 ])
 
 @section($pageKey.'-part2')
