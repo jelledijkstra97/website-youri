@@ -32,7 +32,7 @@
         <div class="sidebar-footer">
             <div class="icons">
                 <a href="https://www.instagram.com/yourivanderstarre" class="uk-icon-button uk-margin-small-right" uk-icon="instagram"></a>
-                <a href="https://www.linkedin.com/in/youri-van-der-starre-62b405173" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
+                <a href="https://www.linkedin.com/in/youri-van-der-starre-62b405173" class="uk-icon-button  uk-margin-small-right" uk-icon="linkedin"></a>
                 <a href="https://www.youtube.com/channel/UC-0VYOh2chQ6SksGEgnARGg" class="uk-icon-button" uk-icon="youtube"></a>
             </div>
             

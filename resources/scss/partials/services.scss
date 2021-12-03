@@ -1,4 +1,4 @@
-.services {
+.services.desktop {
     width: 100vw;
     min-height: 100vh;
     margin: 50px 0px;
@@ -6,6 +6,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include for-phone-only {
+        display: none;
+    }
 
     & .container {
         min-width: 75%;
@@ -75,6 +79,45 @@
                 cursor: pointer;
                 box-shadow: 5px 5px 15px 2px #B2B2B2;
             }
+        }
+    }
+}
+
+.services.phone {
+    display: none;
+
+    @include for-phone-only {
+        display: initial;
+    }
+
+    & .container {
+        padding: 20px;
+
+        & .uk-accordion-title {
+            &::before {
+                margin-top: 35px;
+            }
+
+            & div.container {
+                display: flex;
+                align-items: center;
+
+                & > img {
+                    width: 50px;
+                    margin-left: -20px;
+                }    
+                
+                & .title {
+                    margin-left: 20px;
+                    color: $orange;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        & .uk-accordion-content {
+            text-align: justify;
         }
     }
 }

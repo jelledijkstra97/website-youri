@@ -25,7 +25,7 @@
     <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true;">
         <ul class="uk-slider-items">
             @foreach ($videos as $video)
-            <li class="uk-width-3-4">
+            <li class="uk-width-3-4 slider-item">
                 <img class="film-thumbnail" title="{{ $video['title'] }}" url="{{ $video['url'] }}" src="{{ $video['thumb'] }}">
             </li>
             @endforeach

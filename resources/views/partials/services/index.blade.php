@@ -4,7 +4,7 @@
             'link' => '#film',
             'icon' => 'assets/icons/film.png',
             'title' => 'Film',
-            'body' => "Social content, bedrijfsfilm, cultureel/maatschappelijk, corporate… of een beetje van alles.\n\nYouri van der Starre biedt de complete videoproductie van concept tot eindmontage aan die volledig kan worden aangepast naar uw wensen."
+            'body' => "Social content, bedrijfsfilm, cultureel, maatschappelijk, corporate… of een beetje van alles.\n\nYouri van der Starre biedt de complete videoproductie van concept tot eindmontage aan die volledig kan worden aangepast naar uw wensen."
         ],
         'Foto' => [
             'link' => '#photos',
@@ -21,7 +21,7 @@
     ];
 ?>
 
-<div class="services" id="services">
+<div class="services desktop" id="services">
     <div class="container" uk-scrollspy="target: > a; cls: uk-animation-fade; delay: 100">
         @foreach ($cards as $key => $data)
             @include('partials.services.card', 
@@ -33,5 +33,28 @@
                 ]
             )
         @endforeach
+    </div>
+</div>
+
+<div class="services phone">
+    <div class="container">
+        <ul uk-accordion>
+            @foreach ($cards as $key => $data)
+            <li class="{{ $key === 'Film' ? 'uk-open' : '' }}">
+                <a class="uk-accordion-title" href="#">
+                    <div class="container">
+                        <img src="{{ $data['icon'] }}" alt="{{ $data['title'] }}">
+                        <span class="title">{{ $data['title'] }}</span>
+                    </div>
+                </a>
+                <div class="uk-accordion-content">
+                    <p>{{ $data['body'] }}</p>
+                    <p class="portfolio-link">
+                        <a href="{{ $data['link'] }}">Naar portfolio</a>
+                    </p>
+                </div>
+            </li>
+            @endforeach
+        </ul>
     </div>
 </div>
