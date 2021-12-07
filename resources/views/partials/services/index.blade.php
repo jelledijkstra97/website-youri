@@ -50,7 +50,7 @@
                 <div class="uk-accordion-content">
                     <p>{{ $data['body'] }}</p>
                     <p class="portfolio-link">
-                        <a href="{{ $data['link'] }}">Naar portfolio</a>
+                        <a href="{{ $data['link'] }}" class="portfolio-link">Naar portfolio</a>
                     </p>
                 </div>
             </li>

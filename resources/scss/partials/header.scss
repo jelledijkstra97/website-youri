@@ -30,6 +30,25 @@
             }
         }
 
+        &.right {
+            position: absolute;
+            right: 0;
+
+            & .container {
+                display: flex;
+
+                & a {
+                    min-height: 80px;
+                    padding: 0 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
         @include for-phone-only {
             &:not(.logo):not(.menu-toggle) > a {
                 display: none;

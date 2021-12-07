@@ -18,15 +18,17 @@
     'pageKey' => $pageKey,
     'layout' => '60-40',
     'flipsHeader' => true,
-    'part1ContainerClass' => 'slider'
+    'part1ContainerClass' => 'slider',
+    'fullHeight' => true
 ])
 
 @section($pageKey.'-part1')
-    <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true;">
+    <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true; autoplay: true; autoplay-interval: 3000;">
         <ul class="uk-slider-items">
             @foreach ($videos as $video)
-            <li class="uk-width-3-4 slider-item">
+            <li class="uk-width-5-6 slider-item">
                 <img class="film-thumbnail" title="{{ $video['title'] }}" url="{{ $video['url'] }}" src="{{ $video['thumb'] }}">
+                <div class="button"><span class="uk-icon-button" uk-icon="icon: play-circle; ratio: 2;"></span></div>
             </li>
             @endforeach
         </ul>
@@ -41,7 +43,7 @@
         <button id="film-modal-toggle" uk-toggle="target: #film-modal" type="button" style="display: none;"></button>
         <div id="film-modal" uk-modal>
             <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-                <h2 class="uk-modal-title"></h2>
+                <!-- <h2 class="uk-modal-title"></h2> -->
                 <button class="uk-modal-close-outside" type="button" uk-close></button>
 
                 <div class="iframe-container">
@@ -54,10 +56,10 @@
 @endsection
 
 @section($pageKey.'-part2')
-<div class="text">
+<div class="text" uk-scrollspy="cls:uk-animation-slide-right">
     <div class="title text-bold">Film</div>
     <div class="body">
-        Licht, camera, Youri. Videocontent is haast niet meer weg te denken voor bedrijven en instanties. Door de jarenlange ervaring in het maken van Social Content en bedrijfsfilm tilt Youri zijn producties tot een hoger niveau, met treffende inhoud en een vlijmscherp randje.
+        Licht, camera, Youri. Videocontent is haast niet meer weg te denken voor bedrijven en instanties. Door jarenlange ervaring in het maken van Social Content en bedrijfsfilm tilt Youri zijn producties tot een hoger niveau, met treffende inhoud en een vlijmscherp randje.
     </div>
 </div>
 @endsection

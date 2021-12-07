@@ -67,12 +67,21 @@
                 }
 
                 & .body {
-                    text-align: justify;
+                    text-align: left;
 
                     @include for-phone-only {
                         text-align: left;
                     }
                 }
+            }
+
+            &.hover {
+                -o-transition:.5s;
+                -ms-transition:.5s;
+                -moz-transition:.5s;
+                -webkit-transition:.5s;
+                /* ...and now for the proper property */
+                transition:.5s;
             }
 
             &.hover:hover {
@@ -113,11 +122,28 @@
                     text-transform: uppercase;
                     font-weight: bold;
                 }
+
+
             }
         }
 
         & .uk-accordion-content {
             text-align: justify;
+
+            & .portfolio-link {
+                display: flex;
+                justify-content: center;
+
+                & a {
+                    background-color: $green;
+                    color: $orange;
+                    padding: 10px 20px;
+                    border-radius: 2px;
+                    text-align: center;
+                    text-decoration: none;
+                    font-weight: 900;
+                }
+            }
         }
     }
 }

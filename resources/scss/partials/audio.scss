@@ -1,5 +1,10 @@
 .audio {
     background-color: $green;
+
+    & .audio {
+        background-color: $green;
+    }
+    
     padding: 30px 0px;
 
     & .widget {

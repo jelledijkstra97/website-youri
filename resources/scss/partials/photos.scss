@@ -1,6 +1,10 @@
 .photos {
     padding: 40px 0px;
 
+    & .text {
+        padding-left: 70px;
+    }
+
     & .slider {
         max-width: 80%;
 

@@ -6,12 +6,13 @@
     [
         'pageKey' => $pageKey,
         'layout' => '60-40',
-        'topPart' => 'part2'
+        'topPart' => 'part2',
+        'fullHeight' => true
     ]
 )
 
 @section($pageKey.'-part1')
-<div class="text" id="about">
+<div class="text" id="about" uk-scrollspy="cls:uk-animation-slide-left">
     <div class="title text-bold">Youri van der Starre</div>
     <div class="subtitle text-bold">Hij lacht. Hij maakt. Hij geniet.</div>
     <div class="body">

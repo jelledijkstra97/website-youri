@@ -3,12 +3,18 @@
         <ul class="uk-navbar-nav uk-width-1-1">
             <li class="logo"><a href="#"><img src="assets/logos/main.png" alt="Logo"></a></li>
             <li class="logo flipped"><a href="#"><img src="assets/logos/orange.png" alt="Logo"></a></li>
-            <li><a href="#services">Diensten</a></li>
-            <li><a href="#film">Film</a></li>
-            <li><a href="#audio">Audio</a></li>
-            <li><a href="#photos">Foto</a></li>
-            <li><a href="#about">Youri</a></li>
+            <li><a href="#services" uk-scroll>Diensten</a></li>
+            <li><a href="#film" uk-scroll>Film</a></li>
+            <li><a href="#audio" uk-scroll>Audio</a></li>
+            <li><a href="#photos" uk-scroll>Foto</a></li>
+            <li><a href="#about" uk-scroll>Youri</a></li>
             <li class="menu-toggle"><a href="#sidebar" uk-toggle><span class="material-icons">menu</span></a></li>
+            <li class="right" style="display: none;">
+                <div class="container">
+                    <a href="mailto:yvanderstarre@gmail.com?SUBJECT=Informatie%20aanvraag">yvanderstarre@gmail.com</a>
+                    <a>Item 2</a>
+                </div>
+            </li>
         </ul>
     </div>
 </div>
@@ -21,11 +27,11 @@
 
         <div class="menu-items">
             <ul class="uk-navbar-nav uk-width-1-1">
-                <li><a href="#services">Diensten</a></li>
-                <li><a href="#film">Film</a></li>
-                <li><a href="#audio">Audio</a></li>
-                <li><a href="#photos">Foto</a></li>
-                <li><a href="#about">Youri</a></li>
+                <li><a href="#services" uk-scroll>Diensten</a></li>
+                <li><a href="#film" uk-scroll>Film</a></li>
+                <li><a href="#audio" uk-scroll>Audio</a></li>
+                <li><a href="#photos" uk-scroll>Foto</a></li>
+                <li><a href="#about" uk-scroll>Youri</a></li>
             </ul>
         </div>
 

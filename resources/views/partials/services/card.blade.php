@@ -1,4 +1,4 @@
-<a class="card hover" href="{{ isset($link) ? $link : '#' }}">
+<a class="card hover" href="{{ isset($link) ? $link : '#' }}" uk-scroll>
     <div class="icon">
         <img src="{{ $icon }}" alt="{{ $title }}">
     </div>

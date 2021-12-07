@@ -1,8 +1,10 @@
 .film {
     background-color: $green;
+
     padding: 30px 0px;
 
     & .text {
+        padding: 0px 70px 0px 20px;
 
         & .title {
             color: $orange;
@@ -18,11 +20,30 @@
 
         & .slider-item {
             padding: 0px 5px;
+
+            & .button {
+                display: none;
+                position: absolute;
+                top: 10px;
+                left: 15px;
+
+                & span {
+                    color: $orange;
+                }
+            }
+
+            &:hover .button {
+                display: initial;
+            }
         }
     }
 }
 
 #film-modal {
+    & .uk-modal-dialog {
+        background-color: $beige;
+    }
+
     & .uk-modal-body {
         padding: 20px;
 

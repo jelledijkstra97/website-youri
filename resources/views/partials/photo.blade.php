@@ -29,11 +29,11 @@
 ])
 
 @section($pageKey.'-part2')
-    <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true;">
+    <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true; autoplay: true; autoplay-interval: 3000; pause-on-hover: true;">
         <ul class="uk-slider-items">
             @foreach ($photos as $image)
             <li>
-                <img src="assets/images/{{ $image }}">
+                <img src="assets/images/{{ $image }}" onContextMenu="return false;">
             </li>
             @endforeach
         </ul>
@@ -46,7 +46,7 @@
 
 @section($pageKey.'-part1')
     <div>
-        <div class="text">
+        <div class="text" uk-scrollspy="cls:uk-animation-slide-left">
             <div class="title text-bold">Fotografie</div>
             <div class="body">
                 Onze wereld gaat snel, wij bewegen met haar mee. Maar met één druk op de knop… staat hij soms heel even stil. Youri’s fotografie van outdoor, vastgoed, evenementen, portretten en social content doelt op een effectief resultaat waar “u” tegen gezegd kan worden. 
