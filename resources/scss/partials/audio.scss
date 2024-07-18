@@ -4,15 +4,30 @@
     & .audio {
         background-color: $green;
     }
-    
+
     padding: 30px 0px;
 
     & .widget {
         display: flex;
         justify-content: center;
+
+        & .spotify-iframe {
+            width: 90%;
+            height: 350px;
+            max-width: 90%;
+
+            @include for-phone-only {
+                height: 300px;
+            }
+
+            @media screen and (max-height: 600px) {
+                height: 200px;
+            }
+        }
     }
 
     & .text {
+        padding: 0px 40px;
 
         & .title {
             color: $orange;

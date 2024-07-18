@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer page-footer">
     <!-- Logo and links to socials -->
     <div class="logo-links">
         <div class="logo">

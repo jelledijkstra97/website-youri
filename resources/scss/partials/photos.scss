@@ -2,19 +2,26 @@
     padding: 40px 0px;
 
     & .text {
-        padding-left: 70px;
+        padding: 0px 40px;
+
+        @include for-phone-only {
+            // padding: 0px 20px;
+        }
     }
 
     & .slider {
         max-width: 80%;
 
+        @include for-phone-only {
+            max-width: 100%;
+            padding: 0px 20px;
+        }
+
         & img {
-            // height: 300px;
             max-height: 400px;
             margin: 0px 10px;
 
             @include for-phone-only {
-                // height: 200px;
                 max-height: 200px;
             }
         }

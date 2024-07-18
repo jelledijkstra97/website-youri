@@ -2,6 +2,7 @@ class Main {
     root = null;
     header = null;
     film = null;
+    correctScroll = null;
 
     init()
     {
@@ -13,6 +14,7 @@ class Main {
         } else {
             this.setScrollListener();
             this.getFilm().init();
+            this.getCorrectScroll().init();
         }
     }
 
@@ -23,6 +25,7 @@ class Main {
     {
         var callback = function () {
             this.getHeader().onScroll();
+            this.getCorrectScroll().onScroll();
         };
 
         this.getRoot().addEventListener('scroll', callback.bind(this));
@@ -70,6 +73,22 @@ class Main {
         var Film = require('./film');
         this.film = new Film();
         return this.film;
+    }
+
+    /**
+     * Get a reference to the CorrectScroll class
+     * 
+     * @returns CorrectScroll
+     */
+    getCorrectScroll()
+    {
+        if (this.correctScroll !== null) {
+            return this.correctScroll;
+        }
+
+        var CorrectScroll = require('./correct-scroll');
+        this.correctScroll = new CorrectScroll();
+        return this.correctScroll;
     }
 
 }

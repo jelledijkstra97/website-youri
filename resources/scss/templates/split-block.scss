@@ -1,13 +1,21 @@
 .split-block {
     display: flex;
     width: 100vw;
+    justify-content: center;
+
+    .limit-width-container {
+        width: 1400px;
+        max-width: 1400px;
+        display: flex;
+
+        @include for-phone-only {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
 
     &.full-height {
         min-height: 100vh;
-    }
-
-    @include for-phone-only {
-        flex-direction: column;
     }
 
     & .part1, .part2 {

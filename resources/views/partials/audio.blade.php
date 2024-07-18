@@ -4,7 +4,7 @@
 
 @extends('templates.split-block', [
     'pageKey' => $pageKey, 
-    'layout' => '40-60', 
+    'layout' => '50-50', 
     'flipsHeader' => true,
     'fullHeight' => true
 ])
@@ -21,9 +21,8 @@
 @section($pageKey.'-part1')
 <div class="widget">
     <iframe 
+        class="spotify-iframe"
         src="https://open.spotify.com/embed/playlist/5QV2MHMBENcah6G2WuK09q" 
-        width="500" 
-        height="300" 
         frameBorder="0" 
         allowfullscreen="" 
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>

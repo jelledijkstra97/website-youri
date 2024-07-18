@@ -9,6 +9,14 @@ class Film {
             thumb.onclick = function (event) {
                 this.openModal(event.target);
             }.bind(this);
+
+            // Also allow clicks on the icon
+            let button = thumb.parentElement.querySelector('.button');
+            if (button) {
+                button.onclick = function (event) {
+                    this.openModal(thumb);
+                }.bind(this);
+            }
         }.bind(this));
     }
 

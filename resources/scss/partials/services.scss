@@ -13,6 +13,7 @@
 
     & .container {
         min-width: 75%;
+        max-width: 1200px;
         display: flex;
         justify-content: space-evenly;
 
@@ -87,6 +88,7 @@
             &.hover:hover {
                 cursor: pointer;
                 box-shadow: 5px 5px 15px 2px #B2B2B2;
+                transform: scale(1.02);
             }
         }
     }

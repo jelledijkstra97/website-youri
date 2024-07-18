@@ -21,7 +21,7 @@
     ];
 ?>
 
-<div class="services desktop" id="services">
+<div class="services desktop" id="services-large">
     <div class="container" uk-scrollspy="target: > a; cls: uk-animation-fade; delay: 100">
         @foreach ($cards as $key => $data)
             @include('partials.services.card', 
@@ -36,7 +36,7 @@
     </div>
 </div>
 
-<div class="services phone">
+<div id="services-small" class="services phone full-height">
     <div class="container">
         <ul uk-accordion>
             @foreach ($cards as $key => $data)
